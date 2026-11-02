@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="560" viewBox="0 0 820 560">
+<rect width="100%" height="100%" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+<text x="32" y="36" font-family="Segoe UI, -apple-system, Arial, sans-serif" font-size="18" font-weight="600" fill="#1e293b">Bandwidth Allocation Policy Benchmark</text>
+<text x="32" y="56" font-family="Segoe UI, -apple-system, Arial, sans-serif" font-size="12" fill="#64748b">Comparison across 6 allocation policies under simulated dynamic traffic</text>
+<text x="32" y="99" font-family="Segoe UI, Arial" font-size="13" font-weight="600" fill="#334155">Throughput (Mbps)</text>
+<rect x="80" y="107" width="579.10" height="9" fill="#8c96a4" rx="1"/>
+<text x="665.10" y="115" font-family="Segoe UI, Arial" font-size="10" fill="#475569">78.31</text>
+<rect x="80" y="120" width="603.44" height="9" fill="#475569" rx="1"/>
+<text x="689.44" y="128" font-family="Segoe UI, Arial" font-size="10" fill="#475569">81.60</text>
+<rect x="80" y="133" width="603.19" height="9" fill="#6b46c1" rx="1"/>
+<text x="689.19" y="141" font-family="Segoe UI, Arial" font-size="10" fill="#475569">81.56</text>
+<rect x="80" y="146" width="607.14" height="9" fill="#c05621" rx="1"/>
+<text x="693.14" y="154" font-family="Segoe UI, Arial" font-size="10" fill="#475569">82.10</text>
+<rect x="80" y="159" width="593.59" height="9" fill="#1e6091" rx="1"/>
+<text x="679.59" y="167" font-family="Segoe UI, Arial" font-size="10" fill="#475569">80.26</text>
+<rect x="80" y="172" width="606.51" height="9" fill="#2d6a4f" rx="1"/>
+<text x="692.51" y="180" font-family="Segoe UI, Arial" font-size="10" fill="#475569">82.01</text>
+<text x="32" y="209" font-family="Segoe UI, Arial" font-size="13" font-weight="600" fill="#334155">Link Utilization</text>
+<rect x="80" y="217" width="579.10" height="9" fill="#8c96a4" rx="1"/>
+<text x="665.10" y="225" font-family="Segoe UI, Arial" font-size="10" fill="#475569">78.3%</text>
+<rect x="80" y="230" width="603.44" height="9" fill="#475569" rx="1"/>
+<text x="689.44" y="238" font-family="Segoe UI, Arial" font-size="10" fill="#475569">81.6%</text>
+<rect x="80" y="243" width="603.19" height="9" fill="#6b46c1" rx="1"/>
+<text x="689.19" y="251" font-family="Segoe UI, Arial" font-size="10" fill="#475569">81.6%</text>
+<rect x="80" y="256" width="607.14" height="9" fill="#c05621" rx="1"/>
+<text x="693.14" y="264" font-family="Segoe UI, Arial" font-size="10" fill="#475569">82.1%</text>
+<rect x="80" y="269" width="593.59" height="9" fill="#1e6091" rx="1"/>
+<text x="679.59" y="277" font-family="Segoe UI, Arial" font-size="10" fill="#475569">80.3%</text>
+<rect x="80" y="282" width="606.51" height="9" fill="#2d6a4f" rx="1"/>
+<text x="692.51" y="290" font-family="Segoe UI, Arial" font-size="10" fill="#475569">82.0%</text>
+<text x="32" y="319" font-family="Segoe UI, Arial" font-size="13" font-weight="600" fill="#334155">Jain's Fairness Index</text>
+<rect x="80" y="327" width="607.14" height="9" fill="#8c96a4" rx="1"/>
+<text x="693.14" y="335" font-family="Segoe UI, Arial" font-size="10" fill="#475569">0.88</text>
+<rect x="80" y="340" width="579.14" height="9" fill="#475569" rx="1"/>
+<text x="665.14" y="348" font-family="Segoe UI, Arial" font-size="10" fill="#475569">0.84</text>
+<rect x="80" y="353" width="576.15" height="9" fill="#6b46c1" rx="1"/>
+<text x="662.15" y="361" font-family="Segoe UI, Arial" font-size="10" fill="#475569">0.84</text>
+<rect x="80" y="366" width="584.68" height="9" fill="#c05621" rx="1"/>
+<text x="670.68" y="374" font-family="Segoe UI, Arial" font-size="10" fill="#475569">0.85</text>
+<rect x="80" y="379" width="584.38" height="9" fill="#1e6091" rx="1"/>
+<text x="670.38" y="387" font-family="Segoe UI, Arial" font-size="10" fill="#475569">0.85</text>
+<rect x="80" y="392" width="577.29" height="9" fill="#2d6a4f" rx="1"/>
+<text x="663.29" y="400" font-family="Segoe UI, Arial" font-size="10" fill="#475569">0.84</text>
+<text x="32" y="429" font-family="Segoe UI, Arial" font-size="13" font-weight="600" fill="#334155">Estimated Delay (ms)</text>
+<rect x="80" y="437" width="246.78" height="9" fill="#8c96a4" rx="1"/>
+<text x="332.78" y="445" font-family="Segoe UI, Arial" font-size="10" fill="#475569">58.90</text>
+<rect x="80" y="450" width="489.91" height="9" fill="#475569" rx="1"/>
+<text x="575.91" y="458" font-family="Segoe UI, Arial" font-size="10" fill="#475569">116.92</text>
+<rect x="80" y="463" width="417.08" height="9" fill="#6b46c1" rx="1"/>
+<text x="503.08" y="471" font-family="Segoe UI, Arial" font-size="10" fill="#475569">99.54</text>
+<rect x="80" y="476" width="299.51" height="9" fill="#c05621" rx="1"/>
+<text x="385.51" y="484" font-family="Segoe UI, Arial" font-size="10" fill="#475569">71.48</text>
+<rect x="80" y="489" width="607.14" height="9" fill="#1e6091" rx="1"/>
+<text x="693.14" y="497" font-family="Segoe UI, Arial" font-size="10" fill="#475569">144.90</text>
+<rect x="80" y="502" width="406.05" height="9" fill="#2d6a4f" rx="1"/>
+<text x="492.05" y="510" font-family="Segoe UI, Arial" font-size="10" fill="#475569">96.91</text>
+<line x1="32" y1="516" x2="788" y2="516" stroke="#e2e8f0" stroke-width="1"/>
+<rect x="32" y="528" width="10" height="10" fill="#8c96a4" rx="1"/>
+<text x="46" y="537" font-family="Segoe UI, Arial" font-size="10" fill="#334155">Equal Share</text>
+<rect x="160" y="528" width="10" height="10" fill="#475569" rx="1"/>
+<text x="174" y="537" font-family="Segoe UI, Arial" font-size="10" fill="#334155">Max-Min Fairness</text>
+<rect x="288" y="528" width="10" height="10" fill="#6b46c1" rx="1"/>
+<text x="302" y="537" font-family="Segoe UI, Arial" font-size="10" fill="#334155">Last-Observed + Weighted WF</text>
+<rect x="416" y="528" width="10" height="10" fill="#c05621" rx="1"/>
+<text x="430" y="537" font-family="Segoe UI, Arial" font-size="10" fill="#334155">Moving Average + Weighted WF</text>
+<rect x="544" y="528" width="10" height="10" fill="#1e6091" rx="1"/>
+<text x="558" y="537" font-family="Segoe UI, Arial" font-size="10" fill="#334155">Neural Dynamic + Weighted WF</text>
+<rect x="672" y="528" width="10" height="10" fill="#2d6a4f" rx="1"/>
+<text x="686" y="537" font-family="Segoe UI, Arial" font-size="10" fill="#334155">Oracle Reference (Ideal)</text>
+</svg>

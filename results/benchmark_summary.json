@@ -1,0 +1,1358 @@
+{
+  "standard": {
+    "scenario": "standard",
+    "capacity_mbps": 100.0,
+    "seed_count": 20,
+    "policies": {
+      "equal_share": {
+        "policy": "equal_share",
+        "throughput_mbps_mean": 70.15570564716131,
+        "throughput_mbps_std": 1.9062615695908018,
+        "throughput_mbps_ci95": 0.8921476237083502,
+        "unmet_mbps_mean": 7.644425873854526,
+        "unmet_mbps_std": 0.9167768244053812,
+        "unmet_mbps_ci95": 0.4290598301993355,
+        "dropped_mbps_mean": 5.073421547916735,
+        "dropped_mbps_std": 0.7188299847376748,
+        "dropped_mbps_ci95": 0.33641892223200415,
+        "utilization_mean": 0.701557056471613,
+        "utilization_std": 0.019062615695908034,
+        "utilization_ci95": 0.008921476237083508,
+        "fairness_mean": 0.847201735452104,
+        "fairness_std": 0.011315588269478403,
+        "fairness_ci95": 0.005295797463746946,
+        "backlog_mb_mean": 3.8684849820091323,
+        "backlog_mb_std": 0.3891589719670144,
+        "backlog_mb_ci95": 0.1821299120873971,
+        "delay_est_ms_mean": 38.68484982009132,
+        "delay_est_ms_std": 3.8915897196701423,
+        "delay_est_ms_ci95": 1.8212991208739702,
+        "queue_pressure_mean": 0.08751358239896208,
+        "queue_pressure_std": 0.007147617009254264,
+        "queue_pressure_ci95": 0.0033451492868066396,
+        "classes": {
+          "interactive": {
+            "throughput_mbps_mean": 8.340083182178159,
+            "delay_ms_mean": 0.06718821917055204
+          },
+          "web": {
+            "throughput_mbps_mean": 18.680671102514005,
+            "delay_ms_mean": 8.432332983618034
+          },
+          "video": {
+            "throughput_mbps_mean": 24.876515878909753,
+            "delay_ms_mean": 126.06617046683834
+          },
+          "bulk": {
+            "throughput_mbps_mean": 18.25843548355938,
+            "delay_ms_mean": 20.173707610738354
+          }
+        },
+        "class_interactive_throughput_mean": 8.340083182178159,
+        "class_interactive_delay_ms_mean": 0.06718821917055204,
+        "class_web_throughput_mean": 18.680671102514005,
+        "class_web_delay_ms_mean": 8.432332983618034,
+        "class_video_throughput_mean": 24.876515878909753,
+        "class_video_delay_ms_mean": 126.06617046683834,
+        "class_bulk_throughput_mean": 18.25843548355938,
+        "class_bulk_delay_ms_mean": 20.173707610738354
+      },
+      "max_min_fairness": {
+        "policy": "max_min_fairness",
+        "throughput_mbps_mean": 73.8404788521137,
+        "throughput_mbps_std": 2.0292909260118686,
+        "throughput_mbps_ci95": 0.949726473184387,
+        "unmet_mbps_mean": 7.251680011848164,
+        "unmet_mbps_std": 0.5513396060240434,
+        "unmet_mbps_ci95": 0.25803191294268946,
+        "dropped_mbps_mean": 1.2551191240199484,
+        "dropped_mbps_std": 0.5614346858649695,
+        "dropped_mbps_ci95": 0.26275650144350127,
+        "utilization_mean": 0.7384047885211371,
+        "utilization_std": 0.020292909260118664,
+        "utilization_ci95": 0.009497264731843858,
+        "fairness_mean": 0.8127073348760121,
+        "fairness_std": 0.011173459053095388,
+        "fairness_ci95": 0.0052292797073810885,
+        "backlog_mb_mean": 7.430376977337595,
+        "backlog_mb_std": 1.1550094226303695,
+        "backlog_mb_ci95": 0.540554836858843,
+        "delay_est_ms_mean": 125.48435029395765,
+        "delay_est_ms_std": 25.777768442365076,
+        "delay_est_ms_ci95": 12.064228344747443,
+        "queue_pressure_mean": 0.08694435560005145,
+        "queue_pressure_std": 0.0030928520224307522,
+        "queue_pressure_ci95": 0.0014474826678090497,
+        "classes": {
+          "interactive": {
+            "throughput_mbps_mean": 8.313745678162103,
+            "delay_ms_mean": 71.82335748732945
+          },
+          "web": {
+            "throughput_mbps_mean": 18.51808770631208,
+            "delay_ms_mean": 123.66742335606197
+          },
+          "video": {
+            "throughput_mbps_mean": 28.90472330506528,
+            "delay_ms_mean": 86.49479688172278
+          },
+          "bulk": {
+            "throughput_mbps_mean": 18.103922162574257,
+            "delay_ms_mean": 219.95182345071643
+          }
+        },
+        "class_interactive_throughput_mean": 8.313745678162103,
+        "class_interactive_delay_ms_mean": 71.82335748732945,
+        "class_web_throughput_mean": 18.51808770631208,
+        "class_web_delay_ms_mean": 123.66742335606197,
+        "class_video_throughput_mean": 28.90472330506528,
+        "class_video_delay_ms_mean": 86.49479688172278,
+        "class_bulk_throughput_mean": 18.103922162574257,
+        "class_bulk_delay_ms_mean": 219.95182345071643
+      },
+      "last_observed_weighted": {
+        "policy": "last_observed_weighted",
+        "throughput_mbps_mean": 73.83581977112092,
+        "throughput_mbps_std": 2.0275943078057024,
+        "throughput_mbps_ci95": 0.9489324405473567,
+        "unmet_mbps_mean": 7.281151080216739,
+        "unmet_mbps_std": 0.5682566083690899,
+        "unmet_mbps_ci95": 0.265949222761636,
+        "dropped_mbps_mean": 1.300046056935248,
+        "dropped_mbps_std": 0.5598452260919754,
+        "dropped_mbps_ci95": 0.26201261992058883,
+        "utilization_mean": 0.7383581977112093,
+        "utilization_std": 0.020275943078057045,
+        "utilization_ci95": 0.009489324405473577,
+        "fairness_mean": 0.810892926877421,
+        "fairness_std": 0.010639035572579544,
+        "fairness_ci95": 0.004979164693889785,
+        "backlog_mb_mean": 6.582531113663627,
+        "backlog_mb_std": 1.0001260325775985,
+        "backlog_mb_ci95": 0.46806801207480514,
+        "delay_est_ms_mean": 114.23362638080891,
+        "delay_est_ms_std": 22.85375578216353,
+        "delay_est_ms_ci95": 10.695764022691204,
+        "queue_pressure_mean": 0.08715129174614718,
+        "queue_pressure_std": 0.0031639392380931135,
+        "queue_pressure_ci95": 0.001480752126492431,
+        "classes": {
+          "interactive": {
+            "throughput_mbps_mean": 8.326695840134708,
+            "delay_ms_mean": 41.45139979896435
+          },
+          "web": {
+            "throughput_mbps_mean": 18.666079376180456,
+            "delay_ms_mean": 71.63065194889468
+          },
+          "video": {
+            "throughput_mbps_mean": 29.123878817881938,
+            "delay_ms_mean": 82.02862291736723
+          },
+          "bulk": {
+            "throughput_mbps_mean": 17.719165736923834,
+            "delay_ms_mean": 261.82383085800933
+          }
+        },
+        "class_interactive_throughput_mean": 8.326695840134708,
+        "class_interactive_delay_ms_mean": 41.45139979896435,
+        "class_web_throughput_mean": 18.666079376180456,
+        "class_web_delay_ms_mean": 71.63065194889468,
+        "class_video_throughput_mean": 29.123878817881938,
+        "class_video_delay_ms_mean": 82.02862291736723,
+        "class_bulk_throughput_mean": 17.719165736923834,
+        "class_bulk_delay_ms_mean": 261.82383085800933
+      },
+      "moving_average_weighted": {
+        "policy": "moving_average_weighted",
+        "throughput_mbps_mean": 73.82340958077035,
+        "throughput_mbps_std": 2.2841853107573193,
+        "throughput_mbps_ci95": 1.069019346352926,
+        "unmet_mbps_mean": 9.083609612030918,
+        "unmet_mbps_std": 0.4891058076678501,
+        "unmet_mbps_ci95": 0.22890593348450797,
+        "dropped_mbps_mean": 1.3108682997165728,
+        "dropped_mbps_std": 0.38545880651942077,
+        "dropped_mbps_ci95": 0.18039820125397407,
+        "utilization_mean": 0.7382340958077034,
+        "utilization_std": 0.022841853107573203,
+        "utilization_ci95": 0.010690193463529264,
+        "fairness_mean": 0.8245306278776721,
+        "fairness_std": 0.010553040687670242,
+        "fairness_ci95": 0.004938918311417009,
+        "backlog_mb_mean": 6.227172317186244,
+        "backlog_mb_std": 0.2952706254138169,
+        "backlog_mb_ci95": 0.1381893183055471,
+        "delay_est_ms_mean": 91.05822727688184,
+        "delay_est_ms_std": 5.572943958488621,
+        "delay_est_ms_ci95": 2.6081880833870534,
+        "queue_pressure_mean": 0.10649012690158388,
+        "queue_pressure_std": 0.0032911772231576774,
+        "queue_pressure_ci95": 0.001540300652167822,
+        "classes": {
+          "interactive": {
+            "throughput_mbps_mean": 8.284145535717787,
+            "delay_ms_mean": 124.9884188411482
+          },
+          "web": {
+            "throughput_mbps_mean": 18.56873524210712,
+            "delay_ms_mean": 81.93093859352321
+          },
+          "video": {
+            "throughput_mbps_mean": 29.225798935388735,
+            "delay_ms_mean": 53.016409250943994
+          },
+          "bulk": {
+            "throughput_mbps_mean": 17.74472986755669,
+            "delay_ms_mean": 104.2971424219119
+          }
+        },
+        "class_interactive_throughput_mean": 8.284145535717787,
+        "class_interactive_delay_ms_mean": 124.9884188411482,
+        "class_web_throughput_mean": 18.56873524210712,
+        "class_web_delay_ms_mean": 81.93093859352321,
+        "class_video_throughput_mean": 29.225798935388735,
+        "class_video_delay_ms_mean": 53.016409250943994,
+        "class_bulk_throughput_mean": 17.74472986755669,
+        "class_bulk_delay_ms_mean": 104.2971424219119
+      },
+      "neural_dynamic": {
+        "policy": "neural_dynamic",
+        "throughput_mbps_mean": 73.6712258678018,
+        "throughput_mbps_std": 2.0983095128724907,
+        "throughput_mbps_ci95": 0.9820277949136131,
+        "unmet_mbps_mean": 6.619925611438106,
+        "unmet_mbps_std": 0.8918269335494836,
+        "unmet_mbps_ci95": 0.41738305603887765,
+        "dropped_mbps_mean": 1.4673793722987365,
+        "dropped_mbps_std": 0.8032549712082566,
+        "dropped_mbps_ci95": 0.37593057806290214,
+        "utilization_mean": 0.736712258678018,
+        "utilization_std": 0.020983095128724906,
+        "utilization_ci95": 0.009820277949136131,
+        "fairness_mean": 0.8229936567377777,
+        "fairness_std": 0.010532140279680531,
+        "fairness_ci95": 0.004929136731795405,
+        "backlog_mb_mean": 6.522008048711482,
+        "backlog_mb_std": 2.5411051025778524,
+        "backlog_mb_ci95": 1.1892601283173523,
+        "delay_est_ms_mean": 112.0895999414186,
+        "delay_est_ms_std": 57.971879638532,
+        "delay_est_ms_ci95": 27.131363023031994,
+        "queue_pressure_mean": 0.07620529362784813,
+        "queue_pressure_std": 0.00932111967173392,
+        "queue_pressure_ci95": 0.004362368154556904,
+        "classes": {
+          "interactive": {
+            "throughput_mbps_mean": 8.179831177673037,
+            "delay_ms_mean": 210.70962619841333
+          },
+          "web": {
+            "throughput_mbps_mean": 18.573130020993467,
+            "delay_ms_mean": 55.90288166814183
+          },
+          "video": {
+            "throughput_mbps_mean": 29.19182446794084,
+            "delay_ms_mean": 59.2931631468369
+          },
+          "bulk": {
+            "throughput_mbps_mean": 17.726440201194453,
+            "delay_ms_mean": 122.45272875228238
+          }
+        },
+        "class_interactive_throughput_mean": 8.179831177673037,
+        "class_interactive_delay_ms_mean": 210.70962619841333,
+        "class_web_throughput_mean": 18.573130020993467,
+        "class_web_delay_ms_mean": 55.90288166814183,
+        "class_video_throughput_mean": 29.19182446794084,
+        "class_video_delay_ms_mean": 59.2931631468369,
+        "class_bulk_throughput_mean": 17.726440201194453,
+        "class_bulk_delay_ms_mean": 122.45272875228238
+      },
+      "oracle": {
+        "policy": "oracle",
+        "throughput_mbps_mean": 73.91005402908763,
+        "throughput_mbps_std": 2.0195400232441374,
+        "throughput_mbps_ci95": 0.9451629626609545,
+        "unmet_mbps_mean": 1.504849072653394,
+        "unmet_mbps_std": 0.5890848989588291,
+        "unmet_mbps_ci95": 0.27569705078899936,
+        "dropped_mbps_mean": 1.2312794804966583,
+        "dropped_mbps_std": 0.5638403406302163,
+        "dropped_mbps_ci95": 0.2638823695911439,
+        "utilization_mean": 0.7391005402908764,
+        "utilization_std": 0.020195400232441332,
+        "utilization_ci95": 0.009451629626609526,
+        "fairness_mean": 0.8113316033365114,
+        "fairness_std": 0.010580717257260067,
+        "fairness_ci95": 0.004951871195840557,
+        "backlog_mb_mean": 6.460205241551958,
+        "backlog_mb_std": 1.4260943903592378,
+        "backlog_mb_ci95": 0.6674250490271969,
+        "delay_est_ms_mean": 118.6590397001183,
+        "delay_est_ms_std": 32.96462401223745,
+        "delay_est_ms_ci95": 15.427741632156946,
+        "queue_pressure_mean": 0.011992197916743712,
+        "queue_pressure_std": 0.004518983378363276,
+        "queue_pressure_ci95": 0.0021149250170582586,
+        "classes": {
+          "interactive": {
+            "throughput_mbps_mean": 8.340083182178159,
+            "delay_ms_mean": 0.0
+          },
+          "web": {
+            "throughput_mbps_mean": 18.684618542508826,
+            "delay_ms_mean": 52.57345110604433
+          },
+          "video": {
+            "throughput_mbps_mean": 29.142744302390234,
+            "delay_ms_mean": 95.40932675711333
+          },
+          "bulk": {
+            "throughput_mbps_mean": 17.742608002010396,
+            "delay_ms_mean": 326.65338093731543
+          }
+        },
+        "class_interactive_throughput_mean": 8.340083182178159,
+        "class_interactive_delay_ms_mean": 0.0,
+        "class_web_throughput_mean": 18.684618542508826,
+        "class_web_delay_ms_mean": 52.57345110604433,
+        "class_video_throughput_mean": 29.142744302390234,
+        "class_video_delay_ms_mean": 95.40932675711333,
+        "class_bulk_throughput_mean": 17.742608002010396,
+        "class_bulk_delay_ms_mean": 326.65338093731543
+      }
+    },
+    "forecast_mae_mbps": {
+      "neural": {
+        "mean": 3.067249438979623,
+        "std": 1.9776244659800732
+      },
+      "moving_average": {
+        "mean": 4.387407902216851,
+        "std": 2.3678188716773767
+      },
+      "last_observed": {
+        "mean": 3.1413499654862913,
+        "std": 2.0163730562882174
+      }
+    }
+  },
+  "heavy_bursts": {
+    "scenario": "heavy_bursts",
+    "capacity_mbps": 100.0,
+    "seed_count": 20,
+    "policies": {
+      "equal_share": {
+        "policy": "equal_share",
+        "throughput_mbps_mean": 90.96615823907732,
+        "throughput_mbps_std": 1.4057080111520819,
+        "throughput_mbps_ci95": 0.6578840395163219,
+        "unmet_mbps_mean": 40.75241419580816,
+        "unmet_mbps_std": 4.132881436568998,
+        "unmet_mbps_ci95": 1.934225822689625,
+        "dropped_mbps_mean": 34.52372333821572,
+        "dropped_mbps_std": 4.19294226182288,
+        "dropped_mbps_ci95": 1.9623348311189956,
+        "utilization_mean": 0.9096615823907731,
+        "utilization_std": 0.014057080111520796,
+        "utilization_ci95": 0.006578840395163208,
+        "fairness_mean": 0.9488078963430574,
+        "fairness_std": 0.00829808631368308,
+        "fairness_ci95": 0.0038835793073603722,
+        "backlog_mb_mean": 10.083405484039885,
+        "backlog_mb_std": 0.5385745018519676,
+        "backlog_mb_ci95": 0.2520577289507457,
+        "delay_est_ms_mean": 100.83405484039886,
+        "delay_est_ms_std": 5.385745018519674,
+        "delay_est_ms_ci95": 2.5205772895074556,
+        "queue_pressure_mean": 0.26352630488943096,
+        "queue_pressure_std": 0.017739098990686014,
+        "queue_pressure_ci95": 0.008302058470740144,
+        "classes": {
+          "interactive": {
+            "throughput_mbps_mean": 18.583602695915182,
+            "delay_ms_mean": 46.07710456617534
+          },
+          "web": {
+            "throughput_mbps_mean": 24.252029756250227,
+            "delay_ms_mean": 113.47801209189728
+          },
+          "video": {
+            "throughput_mbps_mean": 24.979512918015473,
+            "delay_ms_mean": 145.46761154913116
+          },
+          "bulk": {
+            "throughput_mbps_mean": 23.151012868896434,
+            "delay_ms_mean": 98.31349115439164
+          }
+        },
+        "class_interactive_throughput_mean": 18.583602695915182,
+        "class_interactive_delay_ms_mean": 46.07710456617534,
+        "class_web_throughput_mean": 24.252029756250227,
+        "class_web_delay_ms_mean": 113.47801209189728,
+        "class_video_throughput_mean": 24.979512918015473,
+        "class_video_delay_ms_mean": 145.46761154913116,
+        "class_bulk_throughput_mean": 23.151012868896434,
+        "class_bulk_delay_ms_mean": 98.31349115439164
+      },
+      "max_min_fairness": {
+        "policy": "max_min_fairness",
+        "throughput_mbps_mean": 92.39916755984592,
+        "throughput_mbps_std": 1.254222159747366,
+        "throughput_mbps_ci95": 0.586987293491502,
+        "unmet_mbps_mean": 38.25011941075839,
+        "unmet_mbps_std": 4.138475127957918,
+        "unmet_mbps_ci95": 1.936843720757755,
+        "dropped_mbps_mean": 33.01644493328143,
+        "dropped_mbps_std": 4.436575904916822,
+        "dropped_mbps_ci95": 2.076357575536136,
+        "utilization_mean": 0.9239916755984592,
+        "utilization_std": 0.012542221597473644,
+        "utilization_ci95": 0.0058698729349150125,
+        "fairness_mean": 0.9019316546614176,
+        "fairness_std": 0.01028690874890631,
+        "fairness_ci95": 0.004814366161518658,
+        "backlog_mb_mean": 13.21232771412896,
+        "backlog_mb_std": 0.19047794884584218,
+        "backlog_mb_ci95": 0.08914539963586263,
+        "delay_est_ms_mean": 200.02369871821173,
+        "delay_est_ms_std": 19.346923248382865,
+        "delay_est_ms_ci95": 9.05453473828238,
+        "queue_pressure_mean": 0.23653197382955912,
+        "queue_pressure_std": 0.017476655207351234,
+        "queue_pressure_ci95": 0.008179232410878163,
+        "classes": {
+          "interactive": {
+            "throughput_mbps_mean": 16.754140308289916,
+            "delay_ms_mean": 274.50527965486833
+          },
+          "web": {
+            "throughput_mbps_mean": 23.953142625306008,
+            "delay_ms_mean": 149.9814365918412
+          },
+          "video": {
+            "throughput_mbps_mean": 29.375799084054954,
+            "delay_ms_mean": 117.36006126071102
+          },
+          "bulk": {
+            "throughput_mbps_mean": 22.316085542195037,
+            "delay_ms_mean": 258.24801736542656
+          }
+        },
+        "class_interactive_throughput_mean": 16.754140308289916,
+        "class_interactive_delay_ms_mean": 274.50527965486833,
+        "class_web_throughput_mean": 23.953142625306008,
+        "class_web_delay_ms_mean": 149.9814365918412,
+        "class_video_throughput_mean": 29.375799084054954,
+        "class_video_delay_ms_mean": 117.36006126071102,
+        "class_bulk_throughput_mean": 22.316085542195037,
+        "class_bulk_delay_ms_mean": 258.24801736542656
+      },
+      "last_observed_weighted": {
+        "policy": "last_observed_weighted",
+        "throughput_mbps_mean": 92.39155982051645,
+        "throughput_mbps_std": 1.2532990762875151,
+        "throughput_mbps_ci95": 0.5865552820989798,
+        "unmet_mbps_mean": 39.10034467671506,
+        "unmet_mbps_std": 4.214482758489756,
+        "unmet_mbps_ci95": 1.9724159780200348,
+        "dropped_mbps_mean": 33.05191895511735,
+        "dropped_mbps_std": 4.435107434110715,
+        "dropped_mbps_ci95": 2.0756703179419773,
+        "utilization_mean": 0.9239155982051646,
+        "utilization_std": 0.012532990762875167,
+        "utilization_ci95": 0.005865552820989806,
+        "fairness_mean": 0.8717734917049704,
+        "fairness_std": 0.007759476571283159,
+        "fairness_ci95": 0.0036315050855150444,
+        "backlog_mb_mean": 12.050709235411906,
+        "backlog_mb_std": 0.2598086810427423,
+        "backlog_mb_ci95": 0.12159280820041857,
+        "delay_est_ms_mean": 184.2943916145715,
+        "delay_est_ms_std": 18.174741597788767,
+        "delay_est_ms_ci95": 8.50594314371095,
+        "queue_pressure_mean": 0.24195559680327036,
+        "queue_pressure_std": 0.017958054562300145,
+        "queue_pressure_ci95": 0.008404531654918737,
+        "classes": {
+          "interactive": {
+            "throughput_mbps_mean": 19.205811775662667,
+            "delay_ms_mean": 152.0827862334962
+          },
+          "web": {
+            "throughput_mbps_mean": 25.814418656109332,
+            "delay_ms_mean": 128.1290108879868
+          },
+          "video": {
+            "throughput_mbps_mean": 29.321547206180487,
+            "delay_ms_mean": 119.15861663725718
+          },
+          "bulk": {
+            "throughput_mbps_mean": 18.04978218256398,
+            "delay_ms_mean": 337.807152699546
+          }
+        },
+        "class_interactive_throughput_mean": 19.205811775662667,
+        "class_interactive_delay_ms_mean": 152.0827862334962,
+        "class_web_throughput_mean": 25.814418656109332,
+        "class_web_delay_ms_mean": 128.1290108879868,
+        "class_video_throughput_mean": 29.321547206180487,
+        "class_video_delay_ms_mean": 119.15861663725718,
+        "class_bulk_throughput_mean": 18.04978218256398,
+        "class_bulk_delay_ms_mean": 337.807152699546
+      },
+      "moving_average_weighted": {
+        "policy": "moving_average_weighted",
+        "throughput_mbps_mean": 93.41626637171171,
+        "throughput_mbps_std": 1.2150750587584496,
+        "throughput_mbps_ci95": 0.5686660968207694,
+        "unmet_mbps_mean": 40.58603326553079,
+        "unmet_mbps_std": 4.389251884894968,
+        "unmet_mbps_ci95": 2.0542095069392925,
+        "dropped_mbps_mean": 32.045111414366374,
+        "dropped_mbps_std": 4.808462291827136,
+        "dropped_mbps_ci95": 2.2504037618854418,
+        "utilization_mean": 0.9341626637171171,
+        "utilization_std": 0.012150750587584514,
+        "utilization_ci95": 0.005686660968207702,
+        "fairness_mean": 0.8900984575157628,
+        "fairness_std": 0.00822499320982777,
+        "fairness_ci95": 0.003849371074894153,
+        "backlog_mb_mean": 10.363458802547319,
+        "backlog_mb_std": 0.33514198320980465,
+        "backlog_mb_ci95": 0.15684947370035557,
+        "delay_est_ms_mean": 116.59473728905525,
+        "delay_est_ms_std": 3.352426998107572,
+        "delay_est_ms_ci95": 1.568966099788397,
+        "queue_pressure_mean": 0.25668738612563463,
+        "queue_pressure_std": 0.019695252858061292,
+        "queue_pressure_ci95": 0.009217556140223862,
+        "classes": {
+          "interactive": {
+            "throughput_mbps_mean": 18.629378962637876,
+            "delay_ms_mean": 80.99059411841633
+          },
+          "web": {
+            "throughput_mbps_mean": 26.946175736934226,
+            "delay_ms_mean": 83.12742552620001
+          },
+          "video": {
+            "throughput_mbps_mean": 29.32093637374433,
+            "delay_ms_mean": 110.85581335496832
+          },
+          "bulk": {
+            "throughput_mbps_mean": 18.51977529839529,
+            "delay_ms_mean": 191.40511615663632
+          }
+        },
+        "class_interactive_throughput_mean": 18.629378962637876,
+        "class_interactive_delay_ms_mean": 80.99059411841633,
+        "class_web_throughput_mean": 26.946175736934226,
+        "class_web_delay_ms_mean": 83.12742552620001,
+        "class_video_throughput_mean": 29.32093637374433,
+        "class_video_delay_ms_mean": 110.85581335496832,
+        "class_bulk_throughput_mean": 18.51977529839529,
+        "class_bulk_delay_ms_mean": 191.40511615663632
+      },
+      "neural_dynamic": {
+        "policy": "neural_dynamic",
+        "throughput_mbps_mean": 91.85132346946591,
+        "throughput_mbps_std": 1.6201528399328406,
+        "throughput_mbps_ci95": 0.7582461553273047,
+        "unmet_mbps_mean": 38.23487427009869,
+        "unmet_mbps_std": 4.13148541479117,
+        "unmet_mbps_ci95": 1.9335724718947485,
+        "dropped_mbps_mean": 33.57248602990118,
+        "dropped_mbps_std": 4.310746480984031,
+        "dropped_mbps_ci95": 2.0174682691864687,
+        "utilization_mean": 0.9185132346946592,
+        "utilization_std": 0.016201528399328424,
+        "utilization_ci95": 0.007582461553273055,
+        "fairness_mean": 0.8837469882369259,
+        "fairness_std": 0.008965481524093702,
+        "fairness_ci95": 0.0041959262908700815,
+        "backlog_mb_mean": 13.201402170972676,
+        "backlog_mb_std": 0.5539881230555374,
+        "backlog_mb_ci95": 0.2592714428234212,
+        "delay_est_ms_mean": 177.30571041558485,
+        "delay_est_ms_std": 18.191313307777243,
+        "delay_est_ms_ci95": 8.513698853589826,
+        "queue_pressure_mean": 0.23580924055540614,
+        "queue_pressure_std": 0.01744565338866131,
+        "queue_pressure_ci95": 0.00816472327985645,
+        "classes": {
+          "interactive": {
+            "throughput_mbps_mean": 16.989309270298207,
+            "delay_ms_mean": 255.92194824390543
+          },
+          "web": {
+            "throughput_mbps_mean": 25.915953867908353,
+            "delay_ms_mean": 125.13259219484011
+          },
+          "video": {
+            "throughput_mbps_mean": 30.262043716414638,
+            "delay_ms_mean": 109.4056762177828
+          },
+          "bulk": {
+            "throughput_mbps_mean": 18.684016614844715,
+            "delay_ms_mean": 218.76262500581097
+          }
+        },
+        "class_interactive_throughput_mean": 16.989309270298207,
+        "class_interactive_delay_ms_mean": 255.92194824390543,
+        "class_web_throughput_mean": 25.915953867908353,
+        "class_web_delay_ms_mean": 125.13259219484011,
+        "class_video_throughput_mean": 30.262043716414638,
+        "class_video_delay_ms_mean": 109.4056762177828,
+        "class_bulk_throughput_mean": 18.684016614844715,
+        "class_bulk_delay_ms_mean": 218.76262500581097
+      },
+      "oracle": {
+        "policy": "oracle",
+        "throughput_mbps_mean": 92.44085831923312,
+        "throughput_mbps_std": 1.2597259016275124,
+        "throughput_mbps_ci95": 0.58956309437749,
+        "unmet_mbps_mean": 33.45442398910819,
+        "unmet_mbps_std": 4.435526733959847,
+        "unmet_mbps_ci95": 2.0758665540566805,
+        "dropped_mbps_mean": 32.976266739723634,
+        "dropped_mbps_std": 4.435006022778656,
+        "dropped_mbps_ci95": 2.0756228565230637,
+        "utilization_mean": 0.9244085831923311,
+        "utilization_std": 0.01259725901627512,
+        "utilization_ci95": 0.0058956309437748974,
+        "fairness_mean": 0.8720325345168414,
+        "fairness_std": 0.007814943658546519,
+        "fairness_ci95": 0.0036574641830940044,
+        "backlog_mb_mean": 13.24440638593045,
+        "backlog_mb_std": 0.2751187389491447,
+        "backlog_mb_ci95": 0.12875805351508235,
+        "delay_est_ms_mean": 222.11367756651725,
+        "delay_est_ms_std": 26.321355129264102,
+        "delay_est_ms_ci95": 12.318631821548669,
+        "queue_pressure_mean": 0.18879269417083186,
+        "queue_pressure_std": 0.02098622292548251,
+        "queue_pressure_ci95": 0.00982174178625547,
+        "classes": {
+          "interactive": {
+            "throughput_mbps_mean": 19.23098974741135,
+            "delay_ms_mean": 244.24019900877857
+          },
+          "web": {
+            "throughput_mbps_mean": 25.826259274588217,
+            "delay_ms_mean": 141.9158842040367
+          },
+          "video": {
+            "throughput_mbps_mean": 29.326189092284245,
+            "delay_ms_mean": 123.52470061204401
+          },
+          "bulk": {
+            "throughput_mbps_mean": 18.05742020494929,
+            "delay_ms_mean": 378.7739264412097
+          }
+        },
+        "class_interactive_throughput_mean": 19.23098974741135,
+        "class_interactive_delay_ms_mean": 244.24019900877857,
+        "class_web_throughput_mean": 25.826259274588217,
+        "class_web_delay_ms_mean": 141.9158842040367,
+        "class_video_throughput_mean": 29.326189092284245,
+        "class_video_delay_ms_mean": 123.52470061204401,
+        "class_bulk_throughput_mean": 18.05742020494929,
+        "class_bulk_delay_ms_mean": 378.7739264412097
+      }
+    },
+    "forecast_mae_mbps": {
+      "neural": {
+        "mean": 6.199338531351153,
+        "std": 6.468640624222731
+      },
+      "moving_average": {
+        "mean": 9.864352777997421,
+        "std": 6.456106869215377
+      },
+      "last_observed": {
+        "mean": 6.586363143092941,
+        "std": 5.615809086945788
+      }
+    }
+  },
+  "capacity_constrained": {
+    "scenario": "capacity_constrained",
+    "capacity_mbps": 75.0,
+    "seed_count": 20,
+    "policies": {
+      "equal_share": {
+        "policy": "equal_share",
+        "throughput_mbps_mean": 67.79251315929685,
+        "throughput_mbps_std": 0.5311513548647426,
+        "throughput_mbps_ci95": 0.2485836291468493,
+        "unmet_mbps_mean": 32.210464909388264,
+        "unmet_mbps_std": 1.3022586559208271,
+        "unmet_mbps_ci95": 0.6094688073593119,
+        "dropped_mbps_mean": 30.371886179740063,
+        "dropped_mbps_std": 1.3122284556831771,
+        "dropped_mbps_ci95": 0.6141347636523604,
+        "utilization_mean": 0.903900175457291,
+        "utilization_std": 0.007082018064863243,
+        "utilization_ci95": 0.0033144483886246613,
+        "fairness_mean": 0.9536131211879078,
+        "fairness_std": 0.004245762452118597,
+        "fairness_ci95": 0.001987055157021732,
+        "backlog_mb_mean": 11.743056385019875,
+        "backlog_mb_std": 0.16642343642609364,
+        "backlog_mb_ci95": 0.0778876706667221,
+        "delay_est_ms_mean": 156.57408513359837,
+        "delay_est_ms_std": 2.218979152347912,
+        "delay_est_ms_ci95": 1.0385022755562932,
+        "queue_pressure_mean": 0.3096629030009591,
+        "queue_pressure_std": 0.00693529103342895,
+        "queue_pressure_ci95": 0.003245778813307154,
+        "classes": {
+          "interactive": {
+            "throughput_mbps_mean": 11.592454170611978,
+            "delay_ms_mean": 7.826332555327293
+          },
+          "web": {
+            "throughput_mbps_mean": 18.732641623418772,
+            "delay_ms_mean": 202.09843153333864
+          },
+          "video": {
+            "throughput_mbps_mean": 18.75,
+            "delay_ms_mean": 215.97306409379271
+          },
+          "bulk": {
+            "throughput_mbps_mean": 18.71741736526608,
+            "delay_ms_mean": 200.39851235193487
+          }
+        },
+        "class_interactive_throughput_mean": 11.592454170611978,
+        "class_interactive_delay_ms_mean": 7.826332555327293,
+        "class_web_throughput_mean": 18.732641623418772,
+        "class_web_delay_ms_mean": 202.09843153333864,
+        "class_video_throughput_mean": 18.75,
+        "class_video_delay_ms_mean": 215.97306409379271,
+        "class_bulk_throughput_mean": 18.71741736526608,
+        "class_bulk_delay_ms_mean": 200.39851235193487
+      },
+      "max_min_fairness": {
+        "policy": "max_min_fairness",
+        "throughput_mbps_mean": 74.71585681573482,
+        "throughput_mbps_std": 0.1542284653852772,
+        "throughput_mbps_ci95": 0.07218031412719328,
+        "unmet_mbps_mean": 25.571108997703938,
+        "unmet_mbps_std": 1.6133434951524097,
+        "unmet_mbps_ci95": 0.7550593204974045,
+        "dropped_mbps_mean": 23.34413854265291,
+        "dropped_mbps_std": 1.6629718470184776,
+        "dropped_mbps_ci95": 0.7782858372001351,
+        "utilization_mean": 0.9962114242097974,
+        "utilization_std": 0.002056379538470365,
+        "utilization_ci95": 0.0009624041883625783,
+        "fairness_mean": 0.9209269929207196,
+        "fairness_std": 0.006241463695777046,
+        "fairness_ci95": 0.002921061355627456,
+        "backlog_mb_mean": 14.464346977118604,
+        "backlog_mb_std": 0.36575929899145443,
+        "backlog_mb_ci95": 0.17117865388982478,
+        "delay_est_ms_mean": 214.6736266120587,
+        "delay_est_ms_std": 9.794453518950041,
+        "delay_est_ms_ci95": 4.583892668165622,
+        "queue_pressure_mean": 0.2347480111036364,
+        "queue_pressure_std": 0.010340994793117876,
+        "queue_pressure_ci95": 0.00483967891848175,
+        "classes": {
+          "interactive": {
+            "throughput_mbps_mean": 11.16485561224626,
+            "delay_ms_mean": 304.10038714505856
+          },
+          "web": {
+            "throughput_mbps_mean": 20.118876451123846,
+            "delay_ms_mean": 190.84029738634155
+          },
+          "video": {
+            "throughput_mbps_mean": 23.195818314910948,
+            "delay_ms_mean": 169.31135848163984
+          },
+          "bulk": {
+            "throughput_mbps_mean": 20.236306437453774,
+            "delay_ms_mean": 194.44246343519487
+          }
+        },
+        "class_interactive_throughput_mean": 11.16485561224626,
+        "class_interactive_delay_ms_mean": 304.10038714505856,
+        "class_web_throughput_mean": 20.118876451123846,
+        "class_web_delay_ms_mean": 190.84029738634155,
+        "class_video_throughput_mean": 23.195818314910948,
+        "class_video_delay_ms_mean": 169.31135848163984,
+        "class_bulk_throughput_mean": 20.236306437453774,
+        "class_bulk_delay_ms_mean": 194.44246343519487
+      },
+      "last_observed_weighted": {
+        "policy": "last_observed_weighted",
+        "throughput_mbps_mean": 74.70784065668651,
+        "throughput_mbps_std": 0.15245561282792972,
+        "throughput_mbps_ci95": 0.07135060312559009,
+        "unmet_mbps_mean": 25.84719996959738,
+        "unmet_mbps_std": 1.6630611566594309,
+        "unmet_mbps_ci95": 0.7783276349183611,
+        "dropped_mbps_mean": 23.446816489720938,
+        "dropped_mbps_std": 1.6636565788376678,
+        "dropped_mbps_ci95": 0.7786062978730632,
+        "utilization_mean": 0.9961045420891536,
+        "utilization_std": 0.00203274150437233,
+        "utilization_ci95": 0.0009513413750078371,
+        "fairness_mean": 0.8936252828605518,
+        "fairness_std": 0.005003980132194374,
+        "fairness_ci95": 0.0023419078762518994,
+        "backlog_mb_mean": 11.860088286833273,
+        "backlog_mb_std": 0.29612353533108215,
+        "backlog_mb_ci95": 0.13858848784663416,
+        "delay_est_ms_mean": 159.54744537574285,
+        "delay_est_ms_std": 7.8209316123036965,
+        "delay_est_ms_ci95": 3.660266599509758,
+        "queue_pressure_mean": 0.2366770219570528,
+        "queue_pressure_std": 0.010781190761987367,
+        "queue_pressure_ci95": 0.005045694605865729,
+        "classes": {
+          "interactive": {
+            "throughput_mbps_mean": 11.563814042372385,
+            "delay_ms_mean": 59.06705017409384
+          },
+          "web": {
+            "throughput_mbps_mean": 22.07591634600562,
+            "delay_ms_mean": 156.61273731591575
+          },
+          "video": {
+            "throughput_mbps_mean": 24.972921018891146,
+            "delay_ms_mean": 154.5607597297708
+          },
+          "bulk": {
+            "throughput_mbps_mean": 16.095189249417366,
+            "delay_ms_mean": 267.9492342831911
+          }
+        },
+        "class_interactive_throughput_mean": 11.563814042372385,
+        "class_interactive_delay_ms_mean": 59.06705017409384,
+        "class_web_throughput_mean": 22.07591634600562,
+        "class_web_delay_ms_mean": 156.61273731591575,
+        "class_video_throughput_mean": 24.972921018891146,
+        "class_video_delay_ms_mean": 154.5607597297708,
+        "class_bulk_throughput_mean": 16.095189249417366,
+        "class_bulk_delay_ms_mean": 267.9492342831911
+      },
+      "moving_average_weighted": {
+        "policy": "moving_average_weighted",
+        "throughput_mbps_mean": 74.80776611523889,
+        "throughput_mbps_std": 0.12300167818892632,
+        "throughput_mbps_ci95": 0.05756589581352452,
+        "unmet_mbps_mean": 27.001212134057642,
+        "unmet_mbps_std": 1.7104368052203511,
+        "unmet_mbps_ci95": 0.8004998661375738,
+        "dropped_mbps_mean": 23.372342379854533,
+        "dropped_mbps_std": 1.6531059217751518,
+        "dropped_mbps_ci95": 0.773668495119737,
+        "utilization_mean": 0.9974368815365189,
+        "utilization_std": 0.0016400223758523136,
+        "utilization_ci95": 0.0007675452775136427,
+        "fairness_mean": 0.9048612073819944,
+        "fairness_std": 0.005476674802768204,
+        "fairness_ci95": 0.0025631332494217363,
+        "backlog_mb_mean": 11.621677792822446,
+        "backlog_mb_std": 0.28923587969038267,
+        "backlog_mb_ci95": 0.135365002827162,
+        "delay_est_ms_mean": 155.457085904575,
+        "delay_est_ms_std": 5.389283015355586,
+        "delay_est_ms_ci95": 2.5222331039666037,
+        "queue_pressure_mean": 0.25043796776416527,
+        "queue_pressure_std": 0.01135986016418988,
+        "queue_pressure_ci95": 0.005316517110144889,
+        "classes": {
+          "interactive": {
+            "throughput_mbps_mean": 11.532454861339613,
+            "delay_ms_mean": 90.28755592991072
+          },
+          "web": {
+            "throughput_mbps_mean": 22.69936424718413,
+            "delay_ms_mean": 115.90299297618508
+          },
+          "video": {
+            "throughput_mbps_mean": 24.50221505353462,
+            "delay_ms_mean": 156.15777328081288
+          },
+          "bulk": {
+            "throughput_mbps_mean": 16.073731953180545,
+            "delay_ms_mean": 259.4800214313915
+          }
+        },
+        "class_interactive_throughput_mean": 11.532454861339613,
+        "class_interactive_delay_ms_mean": 90.28755592991072,
+        "class_web_throughput_mean": 22.69936424718413,
+        "class_web_delay_ms_mean": 115.90299297618508,
+        "class_video_throughput_mean": 24.50221505353462,
+        "class_video_delay_ms_mean": 156.15777328081288,
+        "class_bulk_throughput_mean": 16.073731953180545,
+        "class_bulk_delay_ms_mean": 259.4800214313915
+      },
+      "neural_dynamic": {
+        "policy": "neural_dynamic",
+        "throughput_mbps_mean": 74.35948510040888,
+        "throughput_mbps_std": 0.31884315802176993,
+        "throughput_mbps_ci95": 0.14922147637160266,
+        "unmet_mbps_mean": 25.21729682887575,
+        "unmet_mbps_std": 1.6609585044719184,
+        "unmet_mbps_ci95": 0.7773435747125117,
+        "dropped_mbps_mean": 23.684973531318143,
+        "dropped_mbps_std": 1.6043268864400986,
+        "dropped_mbps_ci95": 0.7508394662208882,
+        "utilization_mean": 0.9914598013387851,
+        "utilization_std": 0.004251242106956966,
+        "utilization_ci95": 0.0019896196849547177,
+        "fairness_mean": 0.8867058740978087,
+        "fairness_std": 0.010548149140293601,
+        "fairness_ci95": 0.004936629023085364,
+        "backlog_mb_mean": 15.228935020588494,
+        "backlog_mb_std": 0.5873943376409477,
+        "backlog_mb_ci95": 0.27490585283036617,
+        "delay_est_ms_mean": 245.99148671046797,
+        "delay_est_ms_std": 20.805412869714626,
+        "delay_est_ms_ci95": 9.737121047858842,
+        "queue_pressure_mean": 0.2312570907388003,
+        "queue_pressure_std": 0.010580189292411541,
+        "queue_pressure_ci95": 0.004951624103525143,
+        "classes": {
+          "interactive": {
+            "throughput_mbps_mean": 10.451439332157083,
+            "delay_ms_mean": 405.56613131584254
+          },
+          "web": {
+            "throughput_mbps_mean": 21.14809110993422,
+            "delay_ms_mean": 179.56993959722405
+          },
+          "video": {
+            "throughput_mbps_mean": 26.07291472057899,
+            "delay_ms_mean": 144.73941225919125
+          },
+          "bulk": {
+            "throughput_mbps_mean": 16.687039937738593,
+            "delay_ms_mean": 254.09046366961417
+          }
+        },
+        "class_interactive_throughput_mean": 10.451439332157083,
+        "class_interactive_delay_ms_mean": 405.56613131584254,
+        "class_web_throughput_mean": 21.14809110993422,
+        "class_web_delay_ms_mean": 179.56993959722405,
+        "class_video_throughput_mean": 26.07291472057899,
+        "class_video_delay_ms_mean": 144.73941225919125,
+        "class_bulk_throughput_mean": 16.687039937738593,
+        "class_bulk_delay_ms_mean": 254.09046366961417
+      },
+      "oracle": {
+        "policy": "oracle",
+        "throughput_mbps_mean": 74.72482299069769,
+        "throughput_mbps_std": 0.15432712727232417,
+        "throughput_mbps_ci95": 0.07222648878102027,
+        "unmet_mbps_mean": 23.846483650966398,
+        "unmet_mbps_std": 1.6564299701717844,
+        "unmet_mbps_ci95": 0.7752241797778419,
+        "dropped_mbps_mean": 23.432586029396152,
+        "dropped_mbps_std": 1.658919743293937,
+        "dropped_mbps_ci95": 0.776389416075911,
+        "utilization_mean": 0.9963309732093025,
+        "utilization_std": 0.002057695030297661,
+        "utilization_ci95": 0.0009630198504136061,
+        "fairness_mean": 0.8937435048252282,
+        "fairness_std": 0.004969992337521505,
+        "fairness_ci95": 0.0023260012815136985,
+        "backlog_mb_mean": 11.721226545959976,
+        "backlog_mb_std": 0.2999574364484722,
+        "backlog_mb_ci95": 0.1403827881808462,
+        "delay_est_ms_mean": 155.78077638322617,
+        "delay_est_ms_std": 8.130880486950613,
+        "delay_est_ms_ci95": 3.8053254709670896,
+        "queue_pressure_mean": 0.21496092709348452,
+        "queue_pressure_std": 0.011313789376097488,
+        "queue_pressure_ci95": 0.005294955565404824,
+        "classes": {
+          "interactive": {
+            "throughput_mbps_mean": 11.575704147303268,
+            "delay_ms_mean": 34.25961033175734
+          },
+          "web": {
+            "throughput_mbps_mean": 22.076949174926092,
+            "delay_ms_mean": 164.32389514484697
+          },
+          "video": {
+            "throughput_mbps_mean": 24.97636833921167,
+            "delay_ms_mean": 154.88055258566948
+          },
+          "bulk": {
+            "throughput_mbps_mean": 16.095801329256663,
+            "delay_ms_mean": 269.659047470631
+          }
+        },
+        "class_interactive_throughput_mean": 11.575704147303268,
+        "class_interactive_delay_ms_mean": 34.25961033175734,
+        "class_web_throughput_mean": 22.076949174926092,
+        "class_web_delay_ms_mean": 164.32389514484697,
+        "class_video_throughput_mean": 24.97636833921167,
+        "class_video_delay_ms_mean": 154.88055258566948,
+        "class_bulk_throughput_mean": 16.095801329256663,
+        "class_bulk_delay_ms_mean": 269.659047470631
+      }
+    },
+    "forecast_mae_mbps": {
+      "neural": {
+        "mean": 3.2318214432352774,
+        "std": 2.846573978947959
+      },
+      "moving_average": {
+        "mean": 4.1871100703226,
+        "std": 2.774223564258168
+      },
+      "last_observed": {
+        "mean": 2.8732869216793393,
+        "std": 2.4082710731952375
+      }
+    }
+  },
+  "distribution_shift": {
+    "scenario": "distribution_shift",
+    "capacity_mbps": 100.0,
+    "seed_count": 20,
+    "policies": {
+      "equal_share": {
+        "policy": "equal_share",
+        "throughput_mbps_mean": 69.59761626446993,
+        "throughput_mbps_std": 1.5902850048297397,
+        "throughput_mbps_ci95": 0.7442677388614761,
+        "unmet_mbps_mean": 30.56174731375082,
+        "unmet_mbps_std": 1.1563369245690531,
+        "unmet_mbps_ci95": 0.5411761197504237,
+        "dropped_mbps_mean": 28.282743558218744,
+        "dropped_mbps_std": 0.953122418729716,
+        "dropped_mbps_ci95": 0.44606989645990835,
+        "utilization_mean": 0.6959761626446995,
+        "utilization_std": 0.01590285004829739,
+        "utilization_ci95": 0.0074426773886147575,
+        "fairness_mean": 0.8608052708046197,
+        "fairness_std": 0.009242934376044568,
+        "fairness_ci95": 0.00432577673034162,
+        "backlog_mb_mean": 4.604005298086461,
+        "backlog_mb_std": 0.27309263810622453,
+        "backlog_mb_ci95": 0.12780982002958396,
+        "delay_est_ms_mean": 46.04005298086462,
+        "delay_est_ms_std": 2.7309263810622455,
+        "delay_est_ms_ci95": 1.2780982002958399,
+        "queue_pressure_mean": 0.297233655223517,
+        "queue_pressure_std": 0.007524795820087454,
+        "queue_pressure_ci95": 0.0035216723753302174,
+        "classes": {
+          "interactive": {
+            "throughput_mbps_mean": 12.601300645994755,
+            "delay_ms_mean": 5.951348714478192
+          },
+          "web": {
+            "throughput_mbps_mean": 17.74690343081244,
+            "delay_ms_mean": 17.636999582100138
+          },
+          "video": {
+            "throughput_mbps_mean": 25.0,
+            "delay_ms_mean": 149.78251161406826
+          },
+          "bulk": {
+            "throughput_mbps_mean": 14.24941218766275,
+            "delay_ms_mean": 10.789352012811857
+          }
+        },
+        "class_interactive_throughput_mean": 12.601300645994755,
+        "class_interactive_delay_ms_mean": 5.951348714478192,
+        "class_web_throughput_mean": 17.74690343081244,
+        "class_web_delay_ms_mean": 17.636999582100138,
+        "class_video_throughput_mean": 25.0,
+        "class_video_delay_ms_mean": 149.78251161406826,
+        "class_bulk_throughput_mean": 14.24941218766275,
+        "class_bulk_delay_ms_mean": 10.789352012811857
+      },
+      "max_min_fairness": {
+        "policy": "max_min_fairness",
+        "throughput_mbps_mean": 87.99407228106602,
+        "throughput_mbps_std": 1.0701815137546709,
+        "throughput_mbps_ci95": 0.5008546097048914,
+        "unmet_mbps_mean": 15.46242634322535,
+        "unmet_mbps_std": 1.5078625719496523,
+        "unmet_mbps_ci95": 0.7056932961893639,
+        "dropped_mbps_mean": 9.64822732641613,
+        "dropped_mbps_std": 1.5754541139121125,
+        "dropped_mbps_ci95": 0.7373267480233305,
+        "utilization_mean": 0.8799407228106603,
+        "utilization_std": 0.010701815137546712,
+        "utilization_ci95": 0.005008546097048915,
+        "fairness_mean": 0.695637276251484,
+        "fairness_std": 0.015102531407471215,
+        "fairness_ci95": 0.007068121039678952,
+        "backlog_mb_mean": 10.353440468951288,
+        "backlog_mb_std": 0.685812665819278,
+        "backlog_mb_ci95": 0.32096651890805133,
+        "delay_est_ms_mean": 218.81855390265565,
+        "delay_est_ms_std": 28.90609100346701,
+        "delay_est_ms_ci95": 13.52831154487166,
+        "queue_pressure_mean": 0.12488535786572783,
+        "queue_pressure_std": 0.008600194651773668,
+        "queue_pressure_ci95": 0.004024968736927404,
+        "classes": {
+          "interactive": {
+            "throughput_mbps_mean": 12.139172180464815,
+            "delay_ms_mean": 297.7277179467205
+          },
+          "web": {
+            "throughput_mbps_mean": 17.049711529332832,
+            "delay_ms_mean": 184.94890277440808
+          },
+          "video": {
+            "throughput_mbps_mean": 45.181270560215054,
+            "delay_ms_mean": 53.47479409992288
+          },
+          "bulk": {
+            "throughput_mbps_mean": 13.623918011053323,
+            "delay_ms_mean": 339.12280078957104
+          }
+        },
+        "class_interactive_throughput_mean": 12.139172180464815,
+        "class_interactive_delay_ms_mean": 297.7277179467205,
+        "class_web_throughput_mean": 17.049711529332832,
+        "class_web_delay_ms_mean": 184.94890277440808,
+        "class_video_throughput_mean": 45.181270560215054,
+        "class_video_delay_ms_mean": 53.47479409992288,
+        "class_bulk_throughput_mean": 13.623918011053323,
+        "class_bulk_delay_ms_mean": 339.12280078957104
+      },
+      "last_observed_weighted": {
+        "policy": "last_observed_weighted",
+        "throughput_mbps_mean": 87.99036653281863,
+        "throughput_mbps_std": 1.0726082629698215,
+        "throughput_mbps_ci95": 0.5019903502455232,
+        "unmet_mbps_mean": 15.649004507740893,
+        "unmet_mbps_std": 1.5600844498211803,
+        "unmet_mbps_ci95": 0.7301336064762005,
+        "dropped_mbps_mean": 9.707419328033541,
+        "dropped_mbps_std": 1.5668868983042834,
+        "dropped_mbps_ci95": 0.7333172137766937,
+        "utilization_mean": 0.8799036653281862,
+        "utilization_std": 0.010726082629698227,
+        "utilization_ci95": 0.005019903502455238,
+        "fairness_mean": 0.68977414247829,
+        "fairness_std": 0.014233555679152722,
+        "fairness_ci95": 0.006661432553981791,
+        "backlog_mb_mean": 8.755310723719395,
+        "backlog_mb_std": 0.684320679320754,
+        "backlog_mb_ci95": 0.32026825575754947,
+        "delay_est_ms_mean": 180.68090955586032,
+        "delay_est_ms_std": 26.499474822486874,
+        "delay_est_ms_ci95": 12.401993445986424,
+        "queue_pressure_mean": 0.12601426657446876,
+        "queue_pressure_std": 0.008911785530499705,
+        "queue_pressure_ci95": 0.004170796081117269,
+        "classes": {
+          "interactive": {
+            "throughput_mbps_mean": 12.573289970128465,
+            "delay_ms_mean": 92.28936952482948
+          },
+          "web": {
+            "throughput_mbps_mean": 17.428134034622243,
+            "delay_ms_mean": 152.87386074341893
+          },
+          "video": {
+            "throughput_mbps_mean": 45.26714981115928,
+            "delay_ms_mean": 53.36331406405445
+          },
+          "bulk": {
+            "throughput_mbps_mean": 12.721792716908634,
+            "delay_ms_mean": 424.1970938911384
+          }
+        },
+        "class_interactive_throughput_mean": 12.573289970128465,
+        "class_interactive_delay_ms_mean": 92.28936952482948,
+        "class_web_throughput_mean": 17.428134034622243,
+        "class_web_delay_ms_mean": 152.87386074341893,
+        "class_video_throughput_mean": 45.26714981115928,
+        "class_video_delay_ms_mean": 53.36331406405445,
+        "class_bulk_throughput_mean": 12.721792716908634,
+        "class_bulk_delay_ms_mean": 424.1970938911384
+      },
+      "moving_average_weighted": {
+        "policy": "moving_average_weighted",
+        "throughput_mbps_mean": 88.78804131861253,
+        "throughput_mbps_std": 1.2165302687026567,
+        "throughput_mbps_ci95": 0.5693471482118435,
+        "unmet_mbps_mean": 17.15553960195108,
+        "unmet_mbps_std": 1.7290797212390683,
+        "unmet_mbps_ci95": 0.8092249191368133,
+        "dropped_mbps_mean": 9.017376903960205,
+        "dropped_mbps_std": 1.680896666215191,
+        "dropped_mbps_ci95": 0.7866748144039206,
+        "utilization_mean": 0.8878804131861255,
+        "utilization_std": 0.012165302687026522,
+        "utilization_ci95": 0.005693471482118415,
+        "fairness_mean": 0.7037159165471566,
+        "fairness_std": 0.015867036635973674,
+        "fairness_ci95": 0.007425916388334849,
+        "backlog_mb_mean": 6.735840434102708,
+        "backlog_mb_std": 0.281546529953113,
+        "backlog_mb_ci95": 0.13176631773304864,
+        "delay_est_ms_mean": 91.95904142782082,
+        "delay_est_ms_std": 3.4180825147254654,
+        "delay_est_ms_ci95": 1.5996934742832682,
+        "queue_pressure_mean": 0.1416469235028687,
+        "queue_pressure_std": 0.010733857279262132,
+        "queue_pressure_ci95": 0.005023542108638277,
+        "classes": {
+          "interactive": {
+            "throughput_mbps_mean": 12.33829956340917,
+            "delay_ms_mean": 101.75133068966238
+          },
+          "web": {
+            "throughput_mbps_mean": 17.548436870004718,
+            "delay_ms_mean": 77.4358563781759
+          },
+          "video": {
+            "throughput_mbps_mean": 45.45574855436368,
+            "delay_ms_mean": 45.95287253718114
+          },
+          "bulk": {
+            "throughput_mbps_mean": 13.445556330834972,
+            "delay_ms_mean": 142.69610610626387
+          }
+        },
+        "class_interactive_throughput_mean": 12.33829956340917,
+        "class_interactive_delay_ms_mean": 101.75133068966238,
+        "class_web_throughput_mean": 17.548436870004718,
+        "class_web_delay_ms_mean": 77.4358563781759,
+        "class_video_throughput_mean": 45.45574855436368,
+        "class_video_delay_ms_mean": 45.95287253718114,
+        "class_bulk_throughput_mean": 13.445556330834972,
+        "class_bulk_delay_ms_mean": 142.69610610626387
+      },
+      "neural_dynamic": {
+        "policy": "neural_dynamic",
+        "throughput_mbps_mean": 85.7618984939675,
+        "throughput_mbps_std": 1.3904272028323503,
+        "throughput_mbps_ci95": 0.6507324832722763,
+        "unmet_mbps_mean": 16.483976932801575,
+        "unmet_mbps_std": 1.5024444937011923,
+        "unmet_mbps_ci95": 0.70315758665635,
+        "dropped_mbps_mean": 11.995124970036352,
+        "dropped_mbps_std": 1.5360154724428967,
+        "dropped_mbps_ci95": 0.7188691077758804,
+        "utilization_mean": 0.8576189849396748,
+        "utilization_std": 0.013904272028323533,
+        "utilization_ci95": 0.006507324832722777,
+        "fairness_mean": 0.7174168382816787,
+        "fairness_std": 0.017067395329584945,
+        "fairness_ci95": 0.007987695093411946,
+        "backlog_mb_mean": 8.145248812295684,
+        "backlog_mb_std": 1.786785983795244,
+        "backlog_mb_ci95": 0.8362319709673937,
+        "delay_est_ms_mean": 128.66494478589948,
+        "delay_est_ms_std": 45.497359863573365,
+        "delay_est_ms_ci95": 21.29317515224512,
+        "queue_pressure_mean": 0.13622646711777328,
+        "queue_pressure_std": 0.011057146059886181,
+        "queue_pressure_ci95": 0.005174844176521452,
+        "classes": {
+          "interactive": {
+            "throughput_mbps_mean": 11.755626659880518,
+            "delay_ms_mean": 272.7269486980088
+          },
+          "web": {
+            "throughput_mbps_mean": 17.720152442538144,
+            "delay_ms_mean": 53.574263781456786
+          },
+          "video": {
+            "throughput_mbps_mean": 42.69209711616554,
+            "delay_ms_mean": 67.4390397139936
+          },
+          "bulk": {
+            "throughput_mbps_mean": 13.594022275383278,
+            "delay_ms_mean": 120.91952695013856
+          }
+        },
+        "class_interactive_throughput_mean": 11.755626659880518,
+        "class_interactive_delay_ms_mean": 272.7269486980088,
+        "class_web_throughput_mean": 17.720152442538144,
+        "class_web_delay_ms_mean": 53.574263781456786,
+        "class_video_throughput_mean": 42.69209711616554,
+        "class_video_delay_ms_mean": 67.4390397139936,
+        "class_bulk_throughput_mean": 13.594022275383278,
+        "class_bulk_delay_ms_mean": 120.91952695013856
+      },
+      "oracle": {
+        "policy": "oracle",
+        "throughput_mbps_mean": 88.04509026575175,
+        "throughput_mbps_std": 1.0600523482721498,
+        "throughput_mbps_ci95": 0.49611406881609843,
+        "unmet_mbps_mean": 9.984210419756572,
+        "unmet_mbps_std": 1.5710748244363628,
+        "unmet_mbps_ci95": 0.7352772010138087,
+        "dropped_mbps_mean": 9.61432141661148,
+        "dropped_mbps_std": 1.5558567636412097,
+        "dropped_mbps_ci95": 0.7281550111777311,
+        "utilization_mean": 0.8804509026575174,
+        "utilization_std": 0.010600523482721494,
+        "utilization_ci95": 0.004961140688160982,
+        "fairness_mean": 0.6900167116093507,
+        "fairness_std": 0.014161702937312488,
+        "fairness_ci95": 0.006627804822136232,
+        "backlog_mb_mean": 9.252652085192006,
+        "backlog_mb_std": 1.0266648598039967,
+        "backlog_mb_ci95": 0.4804884228010834,
+        "delay_est_ms_mean": 199.9800167489588,
+        "delay_est_ms_std": 37.46169015229753,
+        "delay_est_ms_ci95": 17.53240918382726,
+        "queue_pressure_mean": 0.06706369453442546,
+        "queue_pressure_std": 0.009443213741594817,
+        "queue_pressure_ci95": 0.004419509281479304,
+        "classes": {
+          "interactive": {
+            "throughput_mbps_mean": 12.588232485868593,
+            "delay_ms_mean": 65.984263363268
+          },
+          "web": {
+            "throughput_mbps_mean": 17.436989683210676,
+            "delay_ms_mean": 182.26241567451706
+          },
+          "video": {
+            "throughput_mbps_mean": 45.285661420688506,
+            "delay_ms_mean": 58.75741478628157
+          },
+          "bulk": {
+            "throughput_mbps_mean": 12.734206675983964,
+            "delay_ms_mean": 492.91597317176877
+          }
+        },
+        "class_interactive_throughput_mean": 12.588232485868593,
+        "class_interactive_delay_ms_mean": 65.984263363268,
+        "class_web_throughput_mean": 17.436989683210676,
+        "class_web_delay_ms_mean": 182.26241567451706,
+        "class_video_throughput_mean": 45.285661420688506,
+        "class_video_delay_ms_mean": 58.75741478628157,
+        "class_bulk_throughput_mean": 12.734206675983964,
+        "class_bulk_delay_ms_mean": 492.91597317176877
+      }
+    },
+    "forecast_mae_mbps": {
+      "neural": {
+        "mean": 4.3127063024972125,
+        "std": 3.684692823193684
+      },
+      "moving_average": {
+        "mean": 5.735939371709774,
+        "std": 4.131211422444931
+      },
+      "last_observed": {
+        "mean": 3.8591621321194878,
+        "std": 3.593127649491996
+      }
+    }
+  }
+}

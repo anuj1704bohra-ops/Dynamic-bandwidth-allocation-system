@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Bandwidth Allocation — Simulation Testbed</title>
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-content">
+      <div class="title-group">
+        <h1>Dynamic Bandwidth Allocation Testbed</h1>
+        <p class="subtitle">Evaluating Neural vs Baseline Demand Forecasting and Water-Filling Policies on a Shared Bottleneck Link</p>
+      </div>
+      <div class="status-badge">
+        <span class="status-indicator"></span>
+        <span class="badge-text">Synthetic Traffic Simulation &middot; Academic Prototype</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-layout">
+    <!-- Top Configuration Bar -->
+    <section class="panel control-panel">
+      <div class="panel-header">
+        <h2>Simulation Parameters</h2>
+        <span class="panel-note">Configure traffic generation, run length, and link constraints</span>
+      </div>
+      <div class="config-grid">
+        <div class="control-item">
+          <label for="scenario-select">Traffic Scenario</label>
+          <select id="scenario-select">
+            <option value="standard">Standard Mixed Traffic</option>
+            <option value="heavy_bursts">Heavy Bursts</option>
+            <option value="capacity_constrained">Capacity Constrained (Congestion)</option>
+            <option value="distribution_shift">Distribution Shift (Held-out Test)</option>
+          </select>
+        </div>
+
+        <div class="control-item">
+          <label for="capacity-input">Link Capacity (Mbps)</label>
+          <input type="number" id="capacity-input" value="100" min="10" max="1000" step="5">
+        </div>
+
+        <div class="control-item">
+          <label for="seed-input">Random Seed</label>
+          <input type="number" id="seed-input" value="7" min="1" max="99999">
+        </div>
+
+        <div class="control-item">
+          <label for="buffer-input">Buffer / Class (Mb)</label>
+          <input type="number" id="buffer-input" value="5.0" min="0.5" max="50.0" step="0.5">
+        </div>
+
+        <div class="control-item">
+          <label for="slot-duration-input">Slot Duration (ms)</label>
+          <input type="number" id="slot-duration-input" value="50" min="10" max="500" step="10">
+        </div>
+
+        <div class="control-item">
+          <label for="total-slots-input">Run Length (slots)</label>
+          <input type="number" id="total-slots-input" value="600" min="100" max="5000" step="50" title="The first 8 slots provide history to the forecasting models.">
+        </div>
+      </div>
+
+      <!-- Priority Weights Sub-row -->
+      <div class="weights-bar">
+        <span class="weights-label">Priority Weights:</span>
+        <div class="weight-inputs">
+          <label class="weight-tag class-interactive">Interactive: <input type="number" id="w-interactive" value="2.2" step="0.1" min="0.1"></label>
+          <label class="weight-tag class-web">Web: <input type="number" id="w-web" value="1.5" step="0.1" min="0.1"></label>
+          <label class="weight-tag class-video">Video: <input type="number" id="w-video" value="1.2" step="0.1" min="0.1"></label>
+          <label class="weight-tag class-bulk">Bulk: <input type="number" id="w-bulk" value="0.8" step="0.1" min="0.1"></label>
+        </div>
+        <button id="btn-reinit" class="btn btn-secondary">Apply &amp; Re-initialize</button>
+      </div>
+    </section>
+
+    <!-- Simulation Stepper & Playback Controls -->
+    <section class="panel playback-panel">
+      <div class="playback-controls">
+        <div class="btn-group">
+          <button id="btn-play" class="btn btn-primary">Play</button>
+          <button id="btn-pause" class="btn btn-secondary" disabled>Pause</button>
+          <button id="btn-step-predict" class="btn btn-secondary" title="Compute next-slot forecasts and allocations without revealing actual demand">Step 1: Predict</button>
+          <button id="btn-step-reveal" class="btn btn-accent" disabled title="Reveal actual arrival demand and update queues">Step 2: Reveal Actual</button>
+          <button id="btn-step-both" class="btn btn-secondary" title="Predict, allocate, and reveal in one single step">Step &amp; Reveal</button>
+          <button id="btn-fast-forward" class="btn btn-secondary" title="Fast-forward 50 slots in batch mode">+50 Slots</button>
+          <button id="btn-reset" class="btn btn-secondary">Reset</button>
+        </div>
+
+        <div class="playback-status">
+          <span class="status-label">Slot:</span>
+          <span id="lbl-slot-counter" class="status-value">8 / 600</span>
+          <span class="status-divider">|</span>
+          <span class="status-label">Phase:</span>
+          <span id="lbl-step-phase" class="phase-badge phase-revealed">Ready</span>
+          <span class="status-divider">|</span>
+          <label for="speed-select" class="status-label">Interval:</label>
+          <select id="speed-select">
+            <option value="500">500 ms</option>
+            <option value="250" selected>250 ms</option>
+            <option value="100">100 ms</option>
+            <option value="50">50 ms</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Simulation View -->
+    <section class="main-view-grid">
+      <!-- Left Column: Primary Simulation Chart -->
+      <div class="panel chart-panel">
+        <div class="panel-header">
+          <h2>Traffic Demand, Forecasts, and Scheduled Allocation</h2>
+          <div class="legend-row">
+            <span class="legend-chip" style="--chip-color: #1f5f8b">Interactive</span>
+            <span class="legend-chip" style="--chip-color: #1b7a6e">Web</span>
+            <span class="legend-chip" style="--chip-color: #a36417">Video</span>
+            <span class="legend-chip" style="--chip-color: #5a6578">Bulk</span>
+            <span class="legend-chip line-chip" style="--chip-color: #94a3b8">Link Capacity</span>
+          </div>
+        </div>
+        <div class="chart-container">
+          <canvas id="simulation-canvas" width="800" height="340"></canvas>
+        </div>
+        <div class="chart-footer">
+          <span id="lbl-chart-caption">Showing incoming demand history and current slot allocations. The dashed line marks the link capacity.</span>
+        </div>
+      </div>
+
+      <!-- Right Column: Step Inspection & Forecast Comparison -->
+      <div class="panel inspection-panel">
+        <div class="panel-header">
+          <h2>Slot Forecast Inspection</h2>
+          <span id="lbl-inspect-slot" class="panel-note">Slot #8</span>
+        </div>
+        <p class="section-desc">Comparing neural network predictions against persistence and moving-average baselines.</p>
+
+        <div class="forecast-table-wrapper">
+          <table class="data-table" id="forecast-comparison-table">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Interactive</th>
+                <th>Web</th>
+                <th>Video</th>
+                <th>Bulk</th>
+                <th>Mean Error</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="row-neural">
+                <td><strong>Neural MLP</strong></td>
+                <td class="col-c0">&mdash;</td>
+                <td class="col-c1">&mdash;</td>
+                <td class="col-c2">&mdash;</td>
+                <td class="col-c3">&mdash;</td>
+                <td class="col-err">&mdash;</td>
+              </tr>
+              <tr id="row-ma">
+                <td>Moving Average (8)</td>
+                <td class="col-c0">&mdash;</td>
+                <td class="col-c1">&mdash;</td>
+                <td class="col-c2">&mdash;</td>
+                <td class="col-c3">&mdash;</td>
+                <td class="col-err">&mdash;</td>
+              </tr>
+              <tr id="row-last">
+                <td>Last Observed</td>
+                <td class="col-c0">&mdash;</td>
+                <td class="col-c1">&mdash;</td>
+                <td class="col-c2">&mdash;</td>
+                <td class="col-c3">&mdash;</td>
+                <td class="col-err">&mdash;</td>
+              </tr>
+              <tr id="row-actual" class="highlight-row">
+                <td><strong>Actual Demand</strong></td>
+                <td class="col-c0">&mdash;</td>
+                <td class="col-c1">&mdash;</td>
+                <td class="col-c2">&mdash;</td>
+                <td class="col-c3">&mdash;</td>
+                <td class="col-err">0.00 Mbps</td>
+              </tr>
+              <tr id="row-oracle">
+                <td><em>Oracle Reference</em></td>
+                <td class="col-c0">&mdash;</td>
+                <td class="col-c1">&mdash;</td>
+                <td class="col-c2">&mdash;</td>
+                <td class="col-c3">&mdash;</td>
+                <td class="col-err">0.00 Mbps</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="alert-box info-box">
+          <strong>Note:</strong> Oracle is an ideal ceiling that assumes exact foresight of the next slot. Non-oracle policies have access only to past observed history.
+        </div>
+      </div>
+    </section>
+
+    <!-- Policy Benchmark Summary Table -->
+    <section class="panel policy-summary-panel">
+      <div class="panel-header">
+        <h2>Cumulative Policy Performance (Evaluated Slots)</h2>
+        <span class="panel-note">Aggregated over simulated slots for this run</span>
+      </div>
+      <div class="table-responsive">
+        <table class="data-table summary-table" id="policy-summary-table">
+          <thead>
+            <tr>
+              <th>Policy</th>
+              <th class="num-col">Throughput (Mbps)</th>
+              <th class="num-col">Unmet Demand (Mbps)</th>
+              <th class="num-col">Utilization (%)</th>
+              <th class="num-col">Jain Fairness</th>
+              <th class="num-col">Queue Backlog (Mb)</th>
+              <th class="num-col">Est. Delay (ms)</th>
+              <th class="num-col">Packet Drops (Mbps)</th>
+            </tr>
+          </thead>
+          <tbody id="policy-summary-tbody">
+            <tr><td colspan="8" class="text-center text-muted">Initialize and step simulation to populate results.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Secondary Tabbed Details: Class Breakdown & 20-Seed Benchmark -->
+    <section class="panel tabs-panel">
+      <div class="tabs-header">
+        <button class="tab-btn active" data-tab="tab-classes">Per-Class Breakdown</button>
+        <button class="tab-btn" data-tab="tab-benchmark">20-Seed Benchmark (95% CIs)</button>
+        <button class="tab-btn" data-tab="tab-methodology">Network &amp; Queue Assumptions</button>
+      </div>
+
+      <div class="tab-content active" id="tab-classes">
+        <p class="section-desc">Class-specific throughput and queuing delay under different allocation policies.</p>
+        <div class="table-responsive">
+          <table class="data-table" id="class-breakdown-table">
+            <thead>
+              <tr>
+                <th>Policy</th>
+                <th class="num-col">Interactive (Mbps)</th>
+                <th class="num-col">Web (Mbps)</th>
+                <th class="num-col">Video (Mbps)</th>
+                <th class="num-col">Bulk (Mbps)</th>
+                <th class="num-col">Interactive Delay (ms)</th>
+                <th class="num-col">Bulk Delay (ms)</th>
+              </tr>
+            </thead>
+            <tbody id="class-breakdown-tbody">
+              <tr><td colspan="7" class="text-center text-muted">Awaiting simulation data...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-benchmark">
+        <div class="benchmark-header">
+          <p class="section-desc">Each value shows the mean across 20 seed-level results ± the 95% confidence-interval half-width. Standard deviations are available in the CSV files.</p>
+          <div class="benchmark-scenario-selector">
+            <label for="benchmark-scenario-select">Scenario View:</label>
+            <select id="benchmark-scenario-select">
+              <option value="standard">Standard (100 Mbps)</option>
+              <option value="heavy_bursts">Heavy Bursts (100 Mbps)</option>
+              <option value="capacity_constrained">Capacity Constrained (75 Mbps)</option>
+              <option value="distribution_shift">Distribution Shift (100 Mbps)</option>
+            </select>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="data-table" id="benchmark-table">
+            <thead>
+              <tr>
+                <th>Policy</th>
+                <th class="num-col">Throughput (Mbps)</th>
+                <th class="num-col">Unmet Demand (Mbps)</th>
+                <th class="num-col">Utilization (%)</th>
+                <th class="num-col">Jain Fairness</th>
+                <th class="num-col">Est. Delay (ms)</th>
+                <th class="num-col">Drops (Mbps)</th>
+              </tr>
+            </thead>
+            <tbody id="benchmark-tbody">
+              <tr><td colspan="7" class="text-center text-muted">Loading benchmark data from results/benchmark_summary.json...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-methodology">
+        <div class="methodology-grid">
+          <div class="method-card">
+            <h3>Queue Dynamics</h3>
+            <p>Each traffic class maintains a finite-capacity drop-tail buffer. Incoming traffic bits exceeding buffer capacity are dropped and recorded as packet drops. Allocated capacity drains the buffer up to the slot's byte budget.</p>
+          </div>
+          <div class="method-card">
+            <h3>Estimated Delay Metric</h3>
+            <p>Queueing delay (ms) is computed from the backlog divided by scheduled service rate: <code>Delay = (Backlog / Allocation) &times; 1000 ms</code>. When backlog is zero, delay is 0.0 ms.</p>
+          </div>
+          <div class="method-card">
+            <h3>Policy Equality &amp; Fair Comparison</h3>
+            <p>All dynamic policies (Neural, Moving Average, Last-Observed) employ the exact same weighted water-filling allocation algorithm with identical priority weights, isolating forecast accuracy as the sole independent variable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <div class="footer-content">
+      <span>Computer Networks Project &middot; B.Tech Computer Science</span>
+      <span>Synthetic Traffic Testbed &middot; All network metrics evaluated via discrete-slot queue simulation</span>
+    </div>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="420" viewBox="0 0 760 420">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="28" y="35" font-family="Arial" font-size="20" font-weight="bold">Bandwidth allocation policy comparison</text>
+<text x="28" y="91" font-family="Arial" font-size="14">Throughput (Mbps)</text>
+<rect x="70" y="102" width="550.48" height="14" fill="#718096"/>
+<text x="628.48" y="114" font-family="Arial" font-size="11">66.231</text>
+<rect x="70" y="123" width="566.19" height="14" fill="#2878b5"/>
+<text x="644.19" y="135" font-family="Arial" font-size="11">68.122</text>
+<rect x="70" y="144" width="601.85" height="14" fill="#38a169"/>
+<text x="679.85" y="156" font-family="Arial" font-size="11">72.412</text>
+<text x="28" y="203" font-family="Arial" font-size="14">Utilization</text>
+<rect x="70" y="214" width="550.48" height="14" fill="#718096"/>
+<text x="628.48" y="226" font-family="Arial" font-size="11">0.662</text>
+<rect x="70" y="235" width="566.19" height="14" fill="#2878b5"/>
+<text x="644.19" y="247" font-family="Arial" font-size="11">0.681</text>
+<rect x="70" y="256" width="601.85" height="14" fill="#38a169"/>
+<text x="679.85" y="268" font-family="Arial" font-size="11">0.724</text>
+<text x="28" y="315" font-family="Arial" font-size="14">Jain fairness</text>
+<rect x="70" y="326" width="601.85" height="14" fill="#718096"/>
+<text x="679.85" y="338" font-family="Arial" font-size="11">0.839</text>
+<rect x="70" y="347" width="570.87" height="14" fill="#2878b5"/>
+<text x="648.87" y="359" font-family="Arial" font-size="11">0.796</text>
+<rect x="70" y="368" width="571.91" height="14" fill="#38a169"/>
+<text x="649.91" y="380" font-family="Arial" font-size="11">0.797</text>
+<text x="70" y="407" font-family="Arial" font-size="11" fill="#555">Gray: equal share  |  Blue: neural dynamic  |  Green: oracle upper bound</text>
+</svg>
